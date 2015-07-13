@@ -4,8 +4,8 @@
   "description": "Sample isomorphic codebase",
   "main": "lib/index.js",
   "scripts": {
-    "start": "\"node_modules\\.bin\\run-browser\" test/index.js",
-    "test": "node test && \"node_modules\\.bin\\run-browser\" test/index.js --phantom"
+    "start": "run-browser test/index.js",
+    "test": "node test && run-browser test/index.js --phantom"
   },
   "repository": {
     "type": "git",
