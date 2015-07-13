@@ -1,0 +1,43 @@
+{
+  "name": "isomorphic-sandbox",
+  "version": "1.0.0",
+  "description": "Sample isomorphic codebase",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node_modules\\.bin\\run-browser test/index.js",
+    "test": "node test && node_modules\\.bin\\run-browser test/index.js --phantom"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://zenflow@github.com/zenflow/isomorphic-sandbox.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Matthew Francis Brunetti",
+    "email": "zenflow87@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenflow/isomorphic-sandbox/issues"
+  },
+  "homepage": "https://github.com/zenflow/isomorphic-sandbox",
+  "dependencies": {
+    "bpb": "^0.2.1",
+    "brfs": "^1.4.0",
+    "brpp": "https://github.com/zenflow/brpp/tarball/v0.0.4",
+    "rpp": "^0.1.0",
+    "unreachable-branch-transform": "^0.3.0"
+  },
+  "devDependencies": {
+    "run-browser": "https://github.com/zenflow/run-browser/tarball/develop",
+    "tape": "^4.0.0"
+  },
+  "browserify": {
+    "transform": [
+      "bpb",
+      "unreachable-branch-transform",
+      "brpp",
+      "brfs"
+    ]
+  }
+}
